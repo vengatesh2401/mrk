@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Techsphere 2026 — Registration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style .css">
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <header class="hero">
+    <div class="hero-eyebrow">08 · 09 · 2026 &nbsp;—&nbsp; DEPARTMENT OF COMPUTER SCIENCE</div>
+    <h1 class="hero-title">TECHSPHERE<span class="accent-dot">.</span>2026</h1>
+    <p class="hero-sub">Annual college symposium — talks, workshops &amp; project showcase. Fill the form below to reserve your seat.</p>
+  </header>
+
+  <main class="form-wrap">
+    <form id="regForm" novalidate>
+
+      <div class="form-section">
+        <span class="section-tag">01 — ABOUT YOU</span>
+
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" required placeholder="e.g. Ananya Raghavan">
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@college.edu">
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit number">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="college">College / Institution</label>
+            <input type="text" id="college" name="college" required placeholder="Your college name">
+          </div>
+          <div class="field">
+            <label for="year">Year of study</label>
+            <select id="year" name="year" required>
+              <option value="" disabled selected>Select</option>
+              <option>1st Year</option>
+              <option>2nd Year</option>
+              <option>3rd Year</option>
+              <option>4th Year</option>
+              <option>PG</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="department">Department</label>
+          <input type="text" id="department" name="department" required placeholder="e.g. Computer Science">
+        </div>
+      </div>
+
+      <div class="form-section">
+        <span class="section-tag">02 — EVENTS</span>
+        <p class="hint">Pick one or more events you want to attend.</p>
+
+        <div class="checkbox-grid">
+          <label class="check-card">
+            <input type="checkbox" name="events" value="Paper Presentation">
+            <span>Paper Presentation</span>
+          </label>
+          <label class="check-card">
+            <input type="checkbox" name="events" value="Hackathon">
+            <span>Hackathon</span>
+          </label>
+          <label class="check-card">
+            <input type="checkbox" name="events" value="Workshop: AI/ML">
+            <span>Workshop — AI/ML</span>
+          </label>
+          <label class="check-card">
+            <input type="checkbox" name="events" value="Project Expo">
+            <span>Project Expo</span>
+          </label>
+          <label class="check-card">
+            <input type="checkbox" name="events" value="Gaming">
+            <span>Gaming</span>
+          </label>
+          <label class="check-card">
+            <input type="checkbox" name="events" value="Quiz">
+            <span>Tech Quiz</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <span class="section-tag">03 — TEAM (OPTIONAL)</span>
+        <div class="row">
+          <div class="field">
+            <label for="teamName">Team name</label>
+            <input type="text" id="teamName" name="teamName" placeholder="Leave blank if solo">
+          </div>
+          <div class="field">
+            <label for="teamMembers">Other member names</label>
+            <input type="text" id="teamMembers" name="teamMembers" placeholder="Comma separated">
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" id="submitBtn" class="submit-btn">
+        <span class="btn-label">Submit registration</span>
+        <span class="btn-arrow">→</span>
+      </button>
+
+      <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="foot">Techsphere 2026 · Registrations close 05 September 2026</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
